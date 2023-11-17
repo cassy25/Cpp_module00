@@ -36,7 +36,6 @@ int main()
         }
         else if (command == "SEARCH")
         {
-            std::cout << "Vous avez choisi SEARCH" << std::endl;
             phonebook.resumeContact();
         }
         else if (command == "EXIT")

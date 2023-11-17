@@ -28,7 +28,7 @@ public:
 private:
 
     Contact contact[8];
-//    int index;
+    int index;
 };
 
 #endif

@@ -27,11 +27,27 @@ Contact::~Contact()
 
 std::string Contact::Name(void)
 {
+    std::string str;
     std::cout << "Entrez le prenom : ";
-    std::cin >> this->name;
+    std::cin >> str;
+    this->name = str;
     std::cout << this->name << std::endl;
     return (this->name);
 }
+
+/* 
+std::string    Contact::answer(std::string str)
+{
+    std::string answer;
+    std::cout << str;
+    getline(std::cin, answer);
+    return (answer);
+}
+
+void    Contact::what()
+{
+    this->name = answer("Entrez un prenom : ");
+}*/
 
 std::string Contact::LastName(void)
 {

@@ -14,7 +14,7 @@
 
 phoneBook::phoneBook()
 {
-
+    tihs->index = 0;
 }
 
 phoneBook::~phoneBook()
@@ -24,7 +24,5 @@ phoneBook::~phoneBook()
 
 void    phoneBook::resumeContact(void)
 {
-    Contact monContact;
-
-    monContact.afficherContact();
+    this->contact[0].afficherContact();
 }
