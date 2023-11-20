@@ -18,7 +18,6 @@
 int main()
 {
     std::string command;
-    Contact contact;
     phoneBook phonebook;
 
     while (1)
@@ -28,20 +27,28 @@ int main()
         if (command == "ADD")
         {
             std::cout << "Vous avez choisi ADD" << std::endl;
-            contact.Name();
-            contact.LastName();
-            contact.NickName();
-            contact.PhoneNumber();
-            contact.DarkestSecret();
+            phonebook.Index();
+            phonebook.showIndex();
+            phonebook.create();
         }
         else if (command == "SEARCH")
         {
-            phonebook.resumeContact();
+            phonebook.resumeAllContact();
+            while (1)
+            {
+                std::cout << "Entrez l'index de votre contact pour plus d'information ou 0 pour sortir " << std::endl;
+                getline(std::cin, phonebook.search);
+                if (phonebook.search == "0")
+                    break;
+                else if (phonebook.search >= "1" || phonebook.search <= "8")
+                {  
+                    phonebook.resumeContact();
+                }       
+            }
         }
         else if (command == "EXIT")
         {
             break;
         }
     }
-    return 0;
 }

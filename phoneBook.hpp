@@ -24,10 +24,17 @@ public:
     phoneBook();
     ~phoneBook();
     void resumeContact(void);
+    void Index();
+    void showIndex();
+    void resumeAllContact(void);
+    void create();
+//    void newIndex();
+    std::string search;
+
 
 private:
 
-    Contact contact[8];
+    Contact contact[9];
     int index;
 };
 

@@ -16,75 +16,44 @@
 
 Contact::Contact()
 {
-
+	return ;
 }
 
 Contact::~Contact()
 {
-
+	return ;
 }
 
-
-std::string Contact::Name(void)
+//A function that returns the information entered by the user 
+std::string    Contact::info(std::string str)
 {
-    std::string str;
-    std::cout << "Entrez le prenom : ";
-    std::cin >> str;
-    this->name = str;
-    std::cout << this->name << std::endl;
-    return (this->name);
-}
-
-/* 
-std::string    Contact::answer(std::string str)
-{
-    std::string answer;
+    std::string info;
     std::cout << str;
-    getline(std::cin, answer);
-    return (answer);
+    getline(std::cin, info);
+    return (info);
 }
 
-void    Contact::what()
+//A function that saves information entered by the user
+void    Contact::saveInfo()
 {
-    this->name = answer("Entrez un prenom : ");
-}*/
-
-std::string Contact::LastName(void)
-{
-    std::cout << "Entrez le nom de famille : ";
-    std::cin >> this->lastName;
-    std::cout << this->lastName << std::endl;
-    return (this->lastName);
+    _name = info("Entrez le prenom : ");
+    _lastName = info("Entrez le nom de famille : ");
+    _nickname = info("Entrez le surnom : ");
+    _phoneNumber = info("Entrez le numero de telephone : ");
+    _darkestSecret = info("Entrez le plus lourd secret : ");
 }
 
-std::string Contact::NickName(void)
+//A function that displays contact information
+void Contact::afficherContact()
 {
-    std::cout << "Entrez le surnom : ";
-    std::cin >> this->nickname;
-    std::cout << this->nickname << std::endl;
-    return (this->nickname);
+    std::cout << "Prenom : " << _name << " | ";
+    std::cout << "Nom de famille : " << _lastName << " | ";
+    std::cout << "Surnom : " << _nickname << " | ";
+    std::cout << "Numero de telephone : " << _phoneNumber << " | ";
 }
 
-std::string Contact::PhoneNumber(void)
+//A function that displays the secret for more information
+void Contact::afficherSecret()
 {
-    std::cout << "Entrez le numero de telephone : ";
-    std::cin >> this->phoneNumber;
-    std::cout << this->phoneNumber << std::endl;
-    return (this->phoneNumber);
-}
-
-std::string Contact::DarkestSecret(void)
-{
-    std::cout << "Entrez le plus lourd secret : ";
-    std::cin >> this->darkestSecret;
-    std::cout << this->darkestSecret << std::endl;
-    return (this->darkestSecret);
-}
-
-void Contact::afficherContact(void)
-{
-    std::cout << "Prenom : " << this->name << " | ";
-    std::cout << "Nom de famille : " << this->lastName << " | ";
-    std::cout << "Surnom : " << this->nickname << " | ";
-    std::cout << "Numero de telephone : " << this->phoneNumber << std::endl;
+    std::cout << "Secret : " << _darkestSecret << std::endl;
 }

@@ -21,24 +21,24 @@ class Contact
 public:
 
     //Methodes
-    //Jamais modifiable
+
     Contact();
     ~Contact();
-    std::string Name(void);
-    std::string LastName(void);
-    std::string NickName(void);
-    std::string PhoneNumber(void);
-    std::string DarkestSecret(void);
+    std::string info(std::string str);
+    void saveInfo();
     void afficherContact(void);
+    void afficherSecret(void);
 
     //Attributs
+    
 private:
 
-    std::string name;
-    std::string lastName;
-    std::string nickname;
-    std::string phoneNumber;
-    std::string darkestSecret;
+    std::string _name;
+    std::string _lastName;
+    std::string _nickname;
+    std::string _phoneNumber;
+    std::string _darkestSecret;
+
 };
 
 #endif
